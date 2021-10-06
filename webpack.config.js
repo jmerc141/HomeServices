@@ -8,7 +8,8 @@ module.exports = {
   entry: ['babel-polyfill', './src/client/index.js'],
   output: {
     path: path.join(__dirname, outputDirectory),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/'
   },
   module: {
     rules: [{
@@ -32,7 +33,7 @@ module.exports = {
     extensions: ['*', '.js', '.jsx']
   },
   devServer: {
-    port: 3000,
+    port: 8080,
     open: true,
     historyApiFallback: true,
     proxy: {

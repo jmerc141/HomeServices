@@ -2,10 +2,14 @@ import React from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
 import Landing from '../components/Landing'
 import Login from '../components/Login'
+import Register from '../components/Register'
 
 const Routes = () =>
     <Switch>
-    <Route path='/login'>
+      <Route exact path='/register'>
+        <Register />
+      </Route>
+      <Route path='/login'>
         <Login />
       </Route>
       <Route exact path='/'>
