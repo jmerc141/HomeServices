@@ -21,7 +21,8 @@ cd HomeServices
 npm install
 cd client
 npm install
-cd ../server npm install
+cd ../server 
+npm install
 
 # Run (in main directory)
 npm start
