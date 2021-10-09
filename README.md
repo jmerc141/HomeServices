@@ -18,14 +18,10 @@ git clone https://github.com/brianharperr/HomeServices
 cd HomeServices
 
 # Install dependencies
-yarn (or npm install)
+npm install
+cd client
+npm install
+cd ../server npm install
 
-# Start development server
-yarn dev (or npm run dev)
-
-# Build for production
-yarn build (or npm run build)
-
-# Start production server
-yarn start (or npm start)
-```
+# Run (in main directory)
+npm start
