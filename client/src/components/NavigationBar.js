@@ -1,8 +1,10 @@
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import React from 'react';
-import {LinkContainer} from 'react-router-bootstrap';
-import {Route} from 'react-router-dom';
-const Header = () => {
+import {Link} from 'react-router-dom';
+import React, {Component} from 'react';
+
+class NavigationBar extends Component{
+
+	render(){
 	return (
 		<>
 			<Navbar collapseOnSelect expand='sm' bg='dark' variant='dark'>
@@ -11,12 +13,8 @@ const Header = () => {
 				<Navbar.Toggle aria-controls='responsive-navbar-nav'/>
 				<Navbar.Collapse id='responsive-navbar-nav'>
 					<Nav className="justify-content-end" style={{width:"100%"}}>
-						<LinkContainer to="/register">
-							<Nav.Link>Register</Nav.Link>
-						</LinkContainer>
-						<LinkContainer to="/login">
-							<Nav.Link>Login</Nav.Link>
-						</LinkContainer>
+							<Nav.Link as={Link} to="/register">Register</Nav.Link>
+							<Nav.Link as={Link} to="/login">Login</Nav.Link>
 					</Nav>
 				</Navbar.Collapse>
 			</Container>
@@ -24,6 +22,7 @@ const Header = () => {
 
 		</>
 		);
+	}
 }
 
-export default Header;
+export default NavigationBar;

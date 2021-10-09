@@ -71,3 +71,22 @@ body, html, .App, #root, .auth-wrapper {
 .forgot-password a {
   color: #167bff;
 }
+
+.error-message{
+  background: #FF7F7F;
+  width:100%;
+  border-radius: 25px;
+}
+
+.success-message{
+  background: #D1FFBD;
+  width: 100%;
+  border-radius: 25px;
+}
+
+.landing-content{
+  padding:20px;
+}
+.landing-content h1{
+  text-decoration: underline;
+}
