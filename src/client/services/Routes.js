@@ -9,9 +9,7 @@ const Routes = () =>
       <Route exact path='/register'>
         <Register />
       </Route>
-      <Route path='/login'>
-        <Login />
-      </Route>
+      <Route path='/login' component={Login} />
       <Route exact path='/'>
         <Landing />
       </Route>
