@@ -12,8 +12,8 @@ class Landing extends Component{
 
       return(
       	<div className="landing-content">
-        <h1>Developer Tools</h1>
-        <button type="submit" className="btn btn-primary btn-block" onClick={this.clear}>CLEAR DB</button>
+          <h1>Developer Tools</h1>
+          <button type="submit" className="btn btn-primary btn-block" onClick={this.clear}>CLEAR DB</button>
         </div>
       )
   };
