@@ -46,10 +46,9 @@ app.post('/login', (req, res) =>{
 			}else{
 				if(row && row.length > 0)
 				{
-					//res.send({isLoggedIn: true});
 					res.send(row);
 				}else{
-					res.send({isLoggedIn: false});
+					res.status(500).send('Wrong login credentials.')
 				}
 			}
 		}

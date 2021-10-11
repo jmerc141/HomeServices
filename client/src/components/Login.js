@@ -33,10 +33,10 @@ class Login extends Component{
                 this.setState({isLoggedIn: true});
                 this.props.history.push("/");
                 this.props.history.go();
-            }else{
-                console.log("POST request unsuccessful.");
-                this.setState({isLoggedIn: false});
             }
+        }).catch(() =>{
+            console.log("POST request unsuccessful.");
+            this.setState({isLoggedIn: false});
         });
 
     }
