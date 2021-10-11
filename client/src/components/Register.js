@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Redirect} from 'react-router-dom';
 import Axios from 'axios';
 
 class Register extends Component{
@@ -34,7 +33,8 @@ class Register extends Component{
       if(res.data.isRegistered){
           console.log("POST request successful.");
           this.setState({isRegistered: true});
-      }else{
+          this.props.history.push("/login");
+            }else{
           console.log("POST request unsuccessful.");
           this.setState({isRegistered: false});
       }

@@ -6,6 +6,7 @@ class Login extends Component{
     constructor(props){
         super(props);
         this.state = {
+            user: '',
             email: "",
             password: "",
             isLoggedIn: null
@@ -26,9 +27,11 @@ class Login extends Component{
           email: this.state.email, 
           password: this.state.password
         }).then((res)=>{    
-            if(res.data.isLoggedIn){
+            if(res.data){
+                localStorage.setItem('user', JSON.stringify(res.data[0]));
                 console.log("POST request successful.");
                 this.setState({isLoggedIn: true});
+                this.props.history.push("/");
             }else{
                 console.log("POST request unsuccessful.");
                 this.setState({isLoggedIn: false});
